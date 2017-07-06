@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BASE_URL_YH-</key>
+	<string>http://60.190.2.247:7003/nbsxs</string>
+	<key>BASE_URL_YH</key>
+	<string>http://60.190.2.243:7011/nbyhpc</string>
+	<key>BASE_URL_YH--</key>
+	<string>http://192.168.2.44:8080/nbyhpc</string>
+	<key>LOGIN</key>
+	<string>/app/login.mobile</string>
+	<key>GET_COMPANY_LIST</key>
+	<string>/app/company_list.mobile</string>
+	<key>GET_COMPANY_INFO</key>
+	<string>/app/company_show.mobile</string>
+	<key>CHANGE_COMPANY_INFO</key>
+	<string>/app/company_save.mobile</string>
+	<key>GET_DANGER_LIST</key>
+	<string>/app/danger_list.mobile</string>
+	<key>GET_DANGER_INFO</key>
+	<string>/app/danger_show.mobile</string>
+	<key>SUBMIT_DANGER_INFO</key>
+	<string>/app/danger_save.mobile</string>
+	<key>DELETE_DANGER_INFO</key>
+	<string>/app/danger_delete.mobile</string>
+	<key>CHANGE_PASSWORD</key>
+	<string>/app/center_updatePassword.mobile</string>
+	<key>USER_MESSAGE</key>
+	<string>/app/center_getInfo.mobile</string>
+	<key>CHANGE_PHONE</key>
+	<string>/app/center_updateUserInfo.mobile</string>
+	<key>New item - 4</key>
+	<string></string>
+	<key>New item - 3</key>
+	<string></string>
+	<key>New item</key>
+	<string></string>
+	<key>DELETE_SALE_RECORD</key>
+	<string>/app/saleRecord/deleteSaleRecord.sj</string>
+	<key>GET_COMPANY_INFO-</key>
+	<string>/app/company/info.sj</string>
+	<key>SAVE_SALE_RECORDS</key>
+	<string>/app/saleRecord/save.sj</string>
+	<key>UPDATE_PASSWORD</key>
+	<string>/app/user/updatePassword.sj</string>
+	<key>GET_RECORD_INFO</key>
+	<string>/app/saleRecord/info.sj</string>
+	<key>GET_RECORD_LIST</key>
+	<string>/app/saleRecord/list.sj</string>
+	<key>UPDATE_CPY_INFO</key>
+	<string>/app/company/update.sj</string>
+	<key>GET_RECORD_COUNT</key>
+	<string>/app/saleRecord/saleRecordCount.sj</string>
+</dict>
+</plist>
