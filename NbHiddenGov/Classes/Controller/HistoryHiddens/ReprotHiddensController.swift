@@ -234,6 +234,7 @@ class ReprotHiddensController: SinglePhotoViewController, UITableViewDelegate, U
             self.dangerModel.completedDate = time
             self.dangerModel.repaired = true
             self.dangerModel.zgStateStr = "已整改"
+            self.startIndex = 1
             self.cells = self.dangerModel.getCells()
             self.customTableView.reloadData()
         })
@@ -266,10 +267,12 @@ class ReprotHiddensController: SinglePhotoViewController, UITableViewDelegate, U
             }else{
                 self.dangerModel.repaired = false
                 self.dangerModel.zgStateStr = "未整改"
+                self.dangerModel.completedDate = ""
             }
             self.startIndex = selectedIndex
             self.cells = self.dangerModel.getCells()
-            self.customTableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: .None)
+            self.customTableView.reloadData()
+            //self.customTableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: .None)
         }
     }
 

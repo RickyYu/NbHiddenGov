@@ -41,7 +41,6 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
         tableView.dataSource = self
         baseTableView = tableView
         countrySearchController = getSearchController()
-        findCancel()
         getData()
     
     }
@@ -104,7 +103,6 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
         return cell
     }
     
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CompanyInfoController") as! CompanyInfoController
         controller.companyInfoModel = models[indexPath.row]
@@ -161,6 +159,8 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
     
     // 搜索触发事件，点击虚拟键盘上的search按钮时触发此方法
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        controller.searchBar.showsCancelButton = true
+        findCancel()
         searchBar.resignFirstResponder()
         searchStr = countrySearchController.searchBar.text
         reSet()
@@ -173,15 +173,20 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
         // 搜索内容置空
         searchBar.text = ""
         searchStr = ""
-        reSet()
-        getData()
+        if models.count < PAGE_SIZE{
+            reSet()
+            getData()
+        }
+       
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        
         searchStr = searchText
-        print("searchTextStr = \(searchStr)")
     }
-
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        controller.searchBar.showsCancelButton = true
+        findCancel()
+    }
 }
 

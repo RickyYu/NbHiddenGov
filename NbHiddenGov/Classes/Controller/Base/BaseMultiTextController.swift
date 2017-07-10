@@ -27,7 +27,7 @@ class BaseMultiTextController: BaseViewController,UITextViewDelegate {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "set_head.png"), forBarMetrics: .Default)
         textView.text = cell.value
         textView.becomeFirstResponder()
-        if cell.title == "门店名称" {
+        if cell.title == "门店名称" || cell.title == "经营范围"{
             textView.editable = false
         }else{
             let item=UIBarButtonItem(title: "保存", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(self.save))

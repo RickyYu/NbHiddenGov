@@ -29,8 +29,8 @@
                         <rect key="frame" x="8" y="38.5" width="312" height="107.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     </scrollView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_photo" id="lb2-3e-v2z">
-                        <rect key="frame" x="293" y="11" width="20" height="20"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="take_pic" id="lb2-3e-v2z">
+                        <rect key="frame" x="284" y="5" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     </imageView>
                 </subviews>
@@ -45,7 +45,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="add_photo" width="100" height="100"/>
         <image name="point" width="7" height="7"/>
+        <image name="take_pic" width="60" height="60"/>
     </resources>
 </document>

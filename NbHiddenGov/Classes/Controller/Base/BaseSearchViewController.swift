@@ -13,12 +13,12 @@ class BaseSearchViewController: BaseViewController,UISearchBarDelegate {
     var countrySearchController = UISearchController()
     override func viewDidLoad() {
         super.viewDidLoad()
-}
-    
+     }
     
     func getSearchController() -> UISearchController{
             controller.searchBar.delegate = self  //两个样例使用不同的代理
-            controller.searchBar.showsCancelButton = true
+            //初始取消按钮不显示
+            controller.searchBar.showsCancelButton = false
             controller.hidesNavigationBarDuringPresentation = true
             controller.dimsBackgroundDuringPresentation = true
             if #available(iOS 9.1, *) {
@@ -33,6 +33,15 @@ class BaseSearchViewController: BaseViewController,UISearchBarDelegate {
             baseTableView.tableHeaderView = controller.searchBar
             self.definesPresentationContext = true
             return controller
+    }
+    
+    override func viewDidLayoutSubviews() {
+        if countrySearchController.active{
+            self.baseTableView.frame = CGRectMake(0, 20, SCREEN_WIDTH, SCREEN_HEIGHT-20)
+        }else{
+            self.baseTableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+            
+        }
     }
     
     func findCancel() {

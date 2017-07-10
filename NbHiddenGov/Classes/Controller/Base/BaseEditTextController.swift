@@ -25,13 +25,15 @@ class BaseEditTextController: BaseViewController,UITextFieldDelegate {
     var phoneTag:String!
     var phoneTitle:String!
     override func viewDidLoad() {
+        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "set_head.png"), forBarMetrics: .Default)
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.resignEdit(_:))))
+        
         if phoneTag != nil{
-        setNavagation(phoneTitle)
-        customEditText.text = phoneTag
+            setNavagation(phoneTitle)
+            customEditText.text = phoneTag
         }else{
-        setNavagation(cell.title)
+            setNavagation(cell.title)
             cellTitle = cell.title
             customEditText.text = cell.value
             customEditText.becomeFirstResponder()
@@ -54,13 +56,18 @@ class BaseEditTextController: BaseViewController,UITextFieldDelegate {
             
             if cellTitle == "数量(升)" {
                 customEditText.keyboardType = .DecimalPad
-                
             }
-
+            
         }
         
+        if cell.fieldName == "companyName"{
+            customEditText.enabled = false
+           // customEditText.editable = false
+        
+        }else {
         let item=UIBarButtonItem(title: "保存", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(self.save))
         self.navigationItem.rightBarButtonItem=item
+        }
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {

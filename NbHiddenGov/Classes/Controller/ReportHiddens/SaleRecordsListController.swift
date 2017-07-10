@@ -38,12 +38,15 @@ class SaleRecordsListController: BaseSearchViewController,UITableViewDelegate,UI
         table.dataSource = self
         baseTableView = table
         countrySearchController = getSearchController()
-        findCancel()
+        countrySearchController.searchBar.placeholder = "请输入隐患描述进行筛选"
     }
     
     override func viewWillAppear(animated: Bool) {
         reSet()
         getData()
+    }
+    
+    override func viewDidLayoutSubviews() {
     }
     
 
@@ -130,7 +133,6 @@ class SaleRecordsListController: BaseSearchViewController,UITableViewDelegate,UI
         return true
     }
     
-    
     // 搜索触发事件，点击虚拟键盘上的search按钮时触发此方法
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
@@ -140,17 +142,22 @@ class SaleRecordsListController: BaseSearchViewController,UITableViewDelegate,UI
     }
     
     // 取消按钮触发事件
-    
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         // 搜索内容置空
         searchBar.text = ""
         searchStr = ""
-        reSet()
-        
-}
+        if models.count < PAGE_SIZE{
+            reSet()
+            getData()
+        }
+    }
+    
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         searchStr = searchText
     }
     
-    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        controller.searchBar.showsCancelButton = true
+        findCancel()
+    }
 }
