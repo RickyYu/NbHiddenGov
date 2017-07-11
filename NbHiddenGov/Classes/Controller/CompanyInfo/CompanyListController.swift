@@ -47,14 +47,18 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
     
     var isShowProgress = true
     
+    //1、第一次进入，存储数据进行显示。获取更多时候，不存储后续数据，这样每一次都能保证缓存的是第一次加载数据
+    //2、后续进入，先获取本地数据显示，后台异步加载。加载的如果和当前一样，则等于，不一样则追加
+    //3、
     func getData(isLoadLocal:Bool){
         if isLoadLocal {
             if let array = CompanyInfoModel.loadLocalCompanyInfoModels(){
                 self.models = array
                 isShowProgress = false
-            }else{
-                isShowProgress = true
             }
+        }else{
+            isShowProgress = true
+
         }
         var parameters = [String : AnyObject]()
         parameters["pagination.pageSize"] = PAGE_SIZE
@@ -65,7 +69,7 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
 
         }
    
-        NetworkTool.sharedTools.getCompanyList(parameters,isShowProgress:isShowProgress) { (data, error,totalCount) in
+        NetworkTool.sharedTools.getCompanyList(parameters,isShowProgress:isShowProgress,isLoadLocal:isLoadLocal) { (data, error,totalCount) in
             if error == nil{
                 self.totalCount = totalCount!
                 if self.currentPage>totalCount{
@@ -73,11 +77,12 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
                     return
                 }
                 self.toLoadMore = false
-                if self.models[0].id == data[0].id{
-                self.models = data
+                if self.models.count != 0 && isLoadLocal{//避免相同数据叠加
+                    self.models = data
                 }else{
-                self.models += data!
+                    self.models += data!
                 }
+                
                 self.tableView.reloadData()
             }else{
                 // 获取数据失败后

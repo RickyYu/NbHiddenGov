@@ -1,0 +1,126 @@
+
+/* Class = "UITextField"; placeholder = "请确认新密码"; ObjectID = "1cP-af-n6D"; */
+"1cP-af-n6D.placeholder" = "请确认新密码";
+
+/* Class = "UILabel"; text = "用途"; ObjectID = "2XG-8U-tEd"; */
+"2XG-8U-tEd.text" = "用途";
+
+/* Class = "UITextField"; placeholder = "请输入旧密码"; ObjectID = "2Xw-KI-lxy"; */
+"2Xw-KI-lxy.placeholder" = "请输入旧密码";
+
+/* Class = "UILabel"; text = "门店负责人"; ObjectID = "3tt-Ig-ien"; */
+"3tt-Ig-ien.text" = "门店负责人";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "6gP-j6-sU0"; */
+"6gP-j6-sU0.normalTitle" = "登录";
+
+/* Class = "UILabel"; text = "工商注册号"; ObjectID = "EIR-gB-RZv"; */
+"EIR-gB-RZv.text" = "工商注册号";
+
+/* Class = "UILabel"; text = " 技术支持：安生科技 联系电话：0574-87364008"; ObjectID = "GKb-VY-Bt2"; */
+"GKb-VY-Bt2.text" = " 技术支持：安生科技 联系电话：0574-87364008";
+
+/* Class = "UILabel"; text = "所需区域"; ObjectID = "Jcc-VE-pNf"; */
+"Jcc-VE-pNf.text" = "所需区域";
+
+/* Class = "UILabel"; text = "经营范围"; ObjectID = "Jiq-vt-KCx"; */
+"Jiq-vt-KCx.text" = "经营范围";
+
+/* Class = "UILabel"; text = "联系电话"; ObjectID = "LYc-aA-9vK"; */
+"LYc-aA-9vK.text" = "联系电话";
+
+/* Class = "UILabel"; text = "身份证"; ObjectID = "LdE-VD-IsA"; */
+"LdE-VD-IsA.text" = "身份证";
+
+/* Class = "UILabel"; text = "注销"; ObjectID = "NR0-Wz-v51"; */
+"NR0-Wz-v51.text" = "注销";
+
+/* Class = "UILabel"; text = "住址"; ObjectID = "Ot4-zS-7gr"; */
+"Ot4-zS-7gr.text" = "住址";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Oyi-7U-j1s"; */
+"Oyi-7U-j1s.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "请输入新密码"; ObjectID = "PjI-hX-A2I"; */
+"PjI-hX-A2I.placeholder" = "请输入新密码";
+
+/* Class = "UILabel"; text = "证件类型"; ObjectID = "RrT-bA-Z2X"; */
+"RrT-bA-Z2X.text" = "证件类型";
+
+/* Class = "UITextField"; placeholder = "请输入旧密码"; ObjectID = "S8H-ZC-zNc"; */
+"S8H-ZC-zNc.placeholder" = "请输入旧密码";
+
+/* Class = "UILabel"; text = "所在单位"; ObjectID = "TJG-KV-SFI"; */
+"TJG-KV-SFI.text" = "所在单位";
+
+/* Class = "UILabel"; text = "liangc"; ObjectID = "Vuq-qf-4DH"; */
+"Vuq-qf-4DH.text" = "liangc";
+
+/* Class = "UILabel"; text = "联系方式"; ObjectID = "WiG-AQ-LzM"; */
+"WiG-AQ-LzM.text" = "联系方式";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "X4r-ln-Tu6"; */
+"X4r-ln-Tu6.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "版权所有：宁波市安全生产监督管理局 all right reserved"; ObjectID = "YOU-Zc-eDU"; */
+"YOU-Zc-eDU.text" = "版权所有：宁波市安全生产监督管理局 all right reserved";
+
+/* Class = "UITextField"; placeholder = "请输入新密码"; ObjectID = "YSI-bc-Iyy"; */
+"YSI-bc-Iyy.placeholder" = "请输入新密码";
+
+/* Class = "UILabel"; text = "用户名"; ObjectID = "YvI-53-cVV"; */
+"YvI-53-cVV.text" = "用户名";
+
+/* Class = "UIViewController"; title = "登陆页面"; ObjectID = "aaY-5Z-KhW"; */
+"aaY-5Z-KhW.title" = "登陆页面";
+
+/* Class = "UILabel"; text = "门店地址"; ObjectID = "bV9-CH-dVa"; */
+"bV9-CH-dVa.text" = "门店地址";
+
+/* Class = "UILabel"; text = "修改密码"; ObjectID = "f5v-H4-nUP"; */
+"f5v-H4-nUP.text" = "修改密码";
+
+/* Class = "UILabel"; text = "品名"; ObjectID = "gf1-pg-SXd"; */
+"gf1-pg-SXd.text" = "品名";
+
+/* Class = "UIButton"; normalTitle = "记住密码"; ObjectID = "hQ5-0p-Ipg"; */
+"hQ5-0p-Ipg.normalTitle" = "记住密码";
+
+/* Class = "UILabel"; text = "联系电话"; ObjectID = "hYN-lu-ndV"; */
+"hYN-lu-ndV.text" = "联系电话";
+
+/* Class = "UILabel"; text = "门店名称"; ObjectID = "icK-Ec-3SD"; */
+"icK-Ec-3SD.text" = "门店名称";
+
+/* Class = "UIBarButtonItem"; title = "asd"; ObjectID = "ihP-V5-oGn"; */
+"ihP-V5-oGn.title" = "asd";
+
+/* Class = "UILabel"; text = "证件号码"; ObjectID = "lke-Dg-LEp"; */
+"lke-Dg-LEp.text" = "证件号码";
+
+/* Class = "UILabel"; text = "数量"; ObjectID = "lrX-yM-UX5"; */
+"lrX-yM-UX5.text" = "数量";
+
+/* Class = "UILabel"; text = "清除缓存"; ObjectID = "nqK-Fw-0pc"; */
+"nqK-Fw-0pc.text" = "清除缓存";
+
+/* Class = "UILabel"; text = "技术支持：安生科技 0574-87364008"; ObjectID = "pzZ-BD-9HL"; */
+"pzZ-BD-9HL.text" = "技术支持：安生科技 0574-87364008";
+
+/* Class = "UILabel"; text = "姓名"; ObjectID = "qlO-51-Qnj"; */
+"qlO-51-Qnj.text" = "姓名";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "t5l-rF-0ti"; */
+"t5l-rF-0ti.text" = "1";
+
+/* Class = "UILabel"; text = "证件信息"; ObjectID = "v0q-pO-naa"; */
+"v0q-pO-naa.text" = "证件信息";
+
+/* Class = "UITextField"; placeholder = "请输入您的密码"; ObjectID = "wcV-1K-mah"; */
+"wcV-1K-mah.placeholder" = "请输入您的密码";
+
+/* Class = "UITextField"; placeholder = "请确认新密码"; ObjectID = "xYB-AI-9PB"; */
+"xYB-AI-9PB.placeholder" = "请确认新密码";
+
+/* Class = "UITextField"; placeholder = "请输入您的用户名"; ObjectID = "xs8-fD-mki"; */
+"xs8-fD-mki.placeholder" = "请输入您的用户名";

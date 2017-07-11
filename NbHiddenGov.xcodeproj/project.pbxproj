@@ -247,6 +247,8 @@
 		9C5AD4AE1EFE330D0070B374 /* ChildEconomyKindModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildEconomyKindModel.swift; sourceTree = "<group>"; };
 		9C5AD4B01EFE330D0070B374 /* ChildNationalEconomicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildNationalEconomicModel.swift; sourceTree = "<group>"; };
 		9C5AD4B21EFE330D0070B374 /* EconomyKindModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EconomyKindModel.swift; sourceTree = "<group>"; };
+		9C9AA7531F145BA4003749CA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		9C9AA7541F145BA4003749CA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		9CDE9D831F0DE8C500265FD7 /* BaseSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSearchViewController.swift; sourceTree = "<group>"; };
 		FCD81AAC457BFD720772076B /* Pods-NbHiddenGov.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NbHiddenGov.release.xcconfig"; path = "Pods/Target Support Files/Pods-NbHiddenGov/Pods-NbHiddenGov.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1080,6 +1082,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C2EB8DD1EF26466005C6129 /* Base */,
+				9C9AA7531F145BA4003749CA /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1088,6 +1091,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C2EB8E21EF26466005C6129 /* Base */,
+				9C9AA7541F145BA4003749CA /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

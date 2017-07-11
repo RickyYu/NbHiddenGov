@@ -433,7 +433,7 @@ class NetworkTool: Alamofire.Manager {
     
 
     
-    func getCompanyList(parameters:[String:AnyObject],isShowProgress:Bool,finished: (data : [CompanyInfoModel]!, error: String!,totalCount:Int!)->()) {
+    func getCompanyList(parameters:[String:AnyObject],isShowProgress:Bool,isLoadLocal:Bool,finished: (data : [CompanyInfoModel]!, error: String!,totalCount:Int!)->()) {
         if isShowProgress {
             SVProgressHUD.showWithStatus("正在加载...")
         }
@@ -460,7 +460,9 @@ class NetworkTool: Alamofire.Manager {
                         finished(data: companyInfoModels,error: nil,totalCount: totalCount)
                         //  保存在本地 暂无需使用
                         // CpyInfoModel.savaCpyInfoModels(cpyInfoModels)
-                        CompanyInfoModel.savaCompanyInfoModels(companyInfoModels)
+                        if isLoadLocal {
+                          CompanyInfoModel.savaCompanyInfoModels(companyInfoModels)
+                        }
                     }
                     
                 }else{
