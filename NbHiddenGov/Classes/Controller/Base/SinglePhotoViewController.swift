@@ -111,14 +111,14 @@ class SinglePhotoViewController: BaseViewController,UIImagePickerControllerDeleg
            UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
         }
         let imageView = UIImageView()
-        imageView.addOnClickListener(self, action: #selector(showImage))
-        imageView.image = image
+                imageView.image = image
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         self.addImageView(imageView,isDelete: true)
     }
 
     func addImageView(imageView: UIImageView,isDelete:Bool) {
         imageTag += 1
+        imageView.addOnClickListener(self, action: #selector(showImage))
         imageView.userInteractionEnabled = true;
         imageView.frame = CGRectMake(leftWidth, 2.5, IMAGE_HEIGHT, IMAGE_WIDTH)
         imageView.tag = 1000 + imageTag

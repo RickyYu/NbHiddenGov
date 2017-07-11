@@ -49,7 +49,6 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
     
     //1、第一次进入，存储数据进行显示。获取更多时候，不存储后续数据，这样每一次都能保证缓存的是第一次加载数据
     //2、后续进入，先获取本地数据显示，后台异步加载。加载的如果和当前一样，则等于，不一样则追加
-    //3、
     func getData(isLoadLocal:Bool){
         if isLoadLocal {
             if let array = CompanyInfoModel.loadLocalCompanyInfoModels(){

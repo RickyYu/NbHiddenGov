@@ -20,7 +20,7 @@ class ShowSingleImageController: BaseViewController {
     }
     
     func getImageView()->UIImageView{
-        let imageView = UIImageView(frame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT))
+        let imageView = UIImageView(frame:CGRectMake(0, -20, SCREEN_WIDTH, SCREEN_HEIGHT))
         imageView.contentMode = .ScaleAspectFit
         self.view.addSubview(imageView)
        return imageView
