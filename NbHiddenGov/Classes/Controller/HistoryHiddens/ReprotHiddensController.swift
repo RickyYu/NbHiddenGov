@@ -131,7 +131,6 @@ class ReprotHiddensController: SinglePhotoViewController, UITableViewDelegate, U
     
     //设置行高
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        
         if indexPath.section == 2  && indexPath.row == 6{
 
             return 160
@@ -189,12 +188,11 @@ class ReprotHiddensController: SinglePhotoViewController, UITableViewDelegate, U
             }else if cell.fieldName == "repaired"{
             choiceZgState(startIndex,indexPaths: [indexPath])
             }else{ //隐患类别
-                // 注意这里设置的是默认的选中值, 而不是选中的下标,省得去数关联数组里的下标
+ 
+                if childDaIndustryModels == nil{
+                self.showHint("类别数据正在加载，请稍等！", duration: 1, yOffset: 1)
+                }else{
                 UsefulPickerView.showMultipleAssociatedColsPicker("选择隐患", data: multipleAssociatedData, defaultSelectedValues: defaultHiddenVlues) {[unowned self] (selectedIndexs, selectedValues) in
-//                    self.selectedDataLabel.text =
-                    print("选中了第\(selectedIndexs)行----选中的数据为\(selectedValues)")
-                  
-                    
                     for item in self.parentDaIndustryModels{
                         if item.name == selectedValues[1]{
                             self.dangerModel.industryId = item.id?.integerValue
@@ -213,6 +211,7 @@ class ReprotHiddensController: SinglePhotoViewController, UITableViewDelegate, U
                     self.cells = self.dangerModel.getCells()
                     self.customTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
 
+                }
                 }
             }
             

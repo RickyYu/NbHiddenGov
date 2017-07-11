@@ -41,11 +41,21 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
         tableView.dataSource = self
         baseTableView = tableView
         countrySearchController = getSearchController()
-        getData()
+        getData(true)
     
     }
     
-    func getData(){
+    var isShowProgress = true
+    
+    func getData(isLoadLocal:Bool){
+        if isLoadLocal {
+            if let array = CompanyInfoModel.loadLocalCompanyInfoModels(){
+                self.models = array
+                isShowProgress = false
+            }else{
+                isShowProgress = true
+            }
+        }
         var parameters = [String : AnyObject]()
         parameters["pagination.pageSize"] = PAGE_SIZE
         parameters["pagination.itemCount"] = currentPage
@@ -54,9 +64,8 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
             parameters["company.companyName"] = searchStr
 
         }
-        
    
-        NetworkTool.sharedTools.getCompanyList(parameters) { (data, error,totalCount) in
+        NetworkTool.sharedTools.getCompanyList(parameters,isShowProgress:isShowProgress) { (data, error,totalCount) in
             if error == nil{
                 self.totalCount = totalCount!
                 if self.currentPage>totalCount{
@@ -64,7 +73,11 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
                     return
                 }
                 self.toLoadMore = false
+                if self.models[0].id == data[0].id{
+                self.models = data
+                }else{
                 self.models += data!
+                }
                 self.tableView.reloadData()
             }else{
                 // 获取数据失败后
@@ -98,14 +111,15 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
         if count > 0 && indexPath.row == count-1 && !toLoadMore && totalCount>PAGE_SIZE{
             toLoadMore = true
             currentPage += PAGE_SIZE
-            getData()
+            getData(false)
         }
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CompanyInfoController") as! CompanyInfoController
-        controller.companyInfoModel = models[indexPath.row]
+      //  controller.companyInfoModel = models[indexPath.row]
+        controller.companyId = models[indexPath.row].id
         tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow!, animated: true)
         self.navigationController?.pushViewController(controller, animated: true)
     }
@@ -164,7 +178,7 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
         searchBar.resignFirstResponder()
         searchStr = countrySearchController.searchBar.text
         reSet()
-        getData()
+        getData(false)
     }
     
     // 取消按钮触发事件
@@ -175,7 +189,7 @@ class CompanyListController: BaseSearchViewController,UITableViewDelegate,UITabl
         searchStr = ""
         if models.count < PAGE_SIZE{
             reSet()
-            getData()
+            getData(false)
         }
        
     }

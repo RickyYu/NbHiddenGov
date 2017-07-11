@@ -25,6 +25,7 @@ class CompanyInfoController: BaseViewController, UITableViewDelegate, UITableVie
     var thirdAreaChoiceName:String = ""
     let indexPaths: [NSIndexPath] = []
     var isSave:Bool = false  //第一次进入该页面才有保存，之后都无法保存
+    var companyId:Int = 0
     
     override func viewDidLoad() {
         setNavagation("企业基本信息")
@@ -42,7 +43,7 @@ class CompanyInfoController: BaseViewController, UITableViewDelegate, UITableVie
     
     func getData(){
         var parameters = [String : AnyObject]()
-        parameters["company.id"] = companyInfoModel.id
+        parameters["company.id"] = companyId
         
         NetworkTool.sharedTools.getCompanyInfo(parameters) { (data, error) in
             

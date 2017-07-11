@@ -128,7 +128,7 @@ class NetworkTool: Alamofire.Manager {
     }
     
     func getDangerInfo(parameters:[String:AnyObject],finished: (imageModels:[ImageModelVo]!,childDaIndustryModels : [ChildDaIndustryModel]!,parentDaIndustryModels : [ParentDaIndustryModel]!, error: String!)->()) {
-        SVProgressHUD.showWithStatus("正在加载...")
+      //  SVProgressHUD.showWithStatus("正在加载...")
         self.sendPostRequest(AppTools.getServiceURLWithYh("GET_DANGER_INFO"), parameters: parameters) { (response) in
             
             guard response!.result.isSuccess else {
@@ -433,8 +433,10 @@ class NetworkTool: Alamofire.Manager {
     
 
     
-    func getCompanyList(parameters:[String:AnyObject],finished: (data : [CompanyInfoModel]!, error: String!,totalCount:Int!)->()) {
-        SVProgressHUD.showWithStatus("正在加载...")
+    func getCompanyList(parameters:[String:AnyObject],isShowProgress:Bool,finished: (data : [CompanyInfoModel]!, error: String!,totalCount:Int!)->()) {
+        if isShowProgress {
+            SVProgressHUD.showWithStatus("正在加载...")
+        }
         self.sendPostRequest(AppTools.getServiceURLWithYh("GET_COMPANY_LIST"), parameters: parameters) { (response) in
             
             guard response!.result.isSuccess else {
@@ -450,14 +452,15 @@ class NetworkTool: Alamofire.Manager {
                 //  字典转成模型
                 if success {
                     if let items = dict["data"].arrayObject {
-                        var saleRecordModels = [CompanyInfoModel]()
+                        var companyInfoModels = [CompanyInfoModel]()
                         for item in items {
                             let homeItem = CompanyInfoModel(dict: item as! [String: AnyObject])
-                            saleRecordModels.append(homeItem)
+                            companyInfoModels.append(homeItem)
                         }
-                        finished(data: saleRecordModels,error: nil,totalCount: totalCount)
+                        finished(data: companyInfoModels,error: nil,totalCount: totalCount)
                         //  保存在本地 暂无需使用
                         // CpyInfoModel.savaCpyInfoModels(cpyInfoModels)
+                        CompanyInfoModel.savaCompanyInfoModels(companyInfoModels)
                     }
                     
                 }else{
