@@ -4,10 +4,12 @@
 <dict>
 	<key>BASE_URL_YH-</key>
 	<string>http://60.190.2.247:7003/nbsxs</string>
-	<key>BASE_URL_YH</key>
+	<key>BASE_URL_YH3</key>
 	<string>http://60.190.2.243:7011/nbyhpc</string>
 	<key>BASE_URL_YH--</key>
 	<string>http://192.168.2.44:8080/nbyhpc</string>
+	<key>BASE_URL_YH</key>
+	<string>http://60.190.2.248/nbyhpc</string>
 	<key>LOGIN</key>
 	<string>/app/login.mobile</string>
 	<key>GET_COMPANY_LIST</key>

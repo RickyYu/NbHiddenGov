@@ -99,7 +99,8 @@ class CompanyInfoModel:BaseModel,NSCoding{
         aCoder.encodeObject(fouthAreaName, forKey: fouthAreaName_key)
         aCoder.encodeObject(tradeTypeText, forKey: tradeTypeText_key)
         aCoder.encodeObject(firstArea, forKey: firstArea_key)
-        
+        aCoder.encodeObject(fouthArea, forKey: fouthArea_key)
+
         
          aCoder.encodeObject(companyName, forKey: companyName_key)
          aCoder.encodeObject(setupNumber, forKey: setupNumber_key)

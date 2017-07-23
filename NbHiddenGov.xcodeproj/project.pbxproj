@@ -1139,6 +1139,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "49793794-a769-4656-be83-a3c7412da184";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1177,6 +1178,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "49793794-a769-4656-be83-a3c7412da184";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1190,7 +1192,7 @@
 				INFOPLIST_FILE = NbHiddenGov/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.safetys.NbHiddenGov;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.safetys.NbHiddenGovReg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = NbHiddenGov/Classes/NbHiddenGov_Bridge.h;
 			};
@@ -1204,7 +1206,7 @@
 				INFOPLIST_FILE = NbHiddenGov/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.safetys.NbHiddenGov;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.safetys.NbHiddenGovReg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = NbHiddenGov/Classes/NbHiddenGov_Bridge.h;
 			};
